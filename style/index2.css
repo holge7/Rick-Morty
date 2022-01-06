@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI','Roboto','Helvetica','Arial';
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --main-dark: #202329;
+    --main-blue: #00A5BE;
+    --main-gray: #3C3E44;
+    --secon-gray: #9E9E9E;
+    --main-white: #fff;
+    --second-white: #F5F5F5;
+    --main-green: #209045;
+}
+body{
+    background-color: var(--second-white);
+    overflow: hidden;
+}
+
+/*^-^-^-^-^-^-  HEADER  ^-^-^-^-^-^-*/
+header{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: inset 0 -10px 4px var(--main-dark);
+
+}
+.headder__portal{
+    position: absolute;
+    z-index: -5;
+    width: 100%;
+    height: 100%;
+    background-image: url("./../media/portal.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: portal 120s infinite ;
+}
+.header__logo{
+    background-image: url("./../media/characters.png");
+    height: 6rem;
+    width: 6rem;
+    background-size: cover;
+    margin-right: 2rem;
+}
+@keyframes portal {
+    0%{
+        transform: rotateZ(0deg);
+    }100%{
+        transform: rotateZ(360deg);
+    }
+}
+.title{
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--main-dark);
+}
+
+
+/*^-^-^-^-^-^-  NAV  ^-^-^-^-^-^-*/
+nav{
+    height: 70vh;
+    background-color: var(--main-dark);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#nav__sprite{
+    display: flex;
+    margin-top: 10vh;
+}
+#nav__text{
+    margin-top: 5vh;
+    color: var(--main-white);
+    font-size: 4rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#nav__line{
+    height: 100%;
+    width: .6rem;
+    margin-left: .2rem;
+    animation: text .6s steps(2) infinite;
+}
+@keyframes text {
+    from{
+        background-color: var(--main-white);
+    }to{
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+}
+
+.sprite{
+    height: 160px;
+    width: 115px;
+    animation: sprite .5s steps(4) infinite;
+}
+#rickinillo{
+    background-image: url("./../media/rickinillo.png");
+    background-position: -6px 499px;
+}
+#rick{
+    background-image: url("./../media/rick.png");
+    background-position: -6px 499px;
+}
+#morty{
+    height: 160px;
+    background-position: center;
+    background-image: url("./../media/morty.png");
+    animation: sprite2 .5s steps(4) infinite;
+
+}
+@keyframes sprite {
+    0%{
+        background-position: -6px 499px;
+    }100%{
+        background-position: -530px 499px;
+    }
+}
+@keyframes sprite2 {
+    0%{
+        background-position: -6px 496px;
+    }100%{
+        background-position: -530px 496px;
+    }
+}
+
+
+
+/*^-^-^-^-^-^-  MAIN  ^-^-^-^-^-^-*/
+main{
+    height: 70vh;
+    display: grid;
+    grid-auto-rows: max-content;
+    /* background-image: url("./../media/space.png"); */
+    background-repeat: repeat;
+}
+.super__card{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./../media/space.png");
+}
+
+/*card*/
+.card{
+    background-color: var(--main-gray);
+    display: flex;
+    width: 50rem;
+    height: 18rem;
+    border-radius: .7rem;
+    overflow: hidden;
+}
+.card__img{
+    width: 18rem;
+    height: 18rem;
+}
+.card__data{
+    color: var(--main-white);
+    padding: 1rem;
+}
+.card__data > div{
+    margin: 1rem 0;
+}
+.card__data-name{
+    color: var(--main-white);
+    font-weight: 800;
+    font-size: 2rem;
+}
+.card__data-lot{
+    display: flex;
+    color: var(--main-white);
+}
+.card__data-info{
+    color: var(--secon-gray);
+}
+.card__data-origin, .card__data-gender, .card__data-lot{
+    font-size: 1.3rem;
+}
+#next{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+#next:hover{
+    background-color: rgba(255, 255, 255, 0);
+}
+#gun{
+    width: 10rem;
+    height: 10rem;
+    background-image: url("./../media/gun.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: gun 2s infinite alternate-reverse linear;
+    transition: all .5s;
+    display: none;
+}
+#gun:hover{
+    width: 11rem;
+    height: 11rem;
+}
+@keyframes gun {
+    0%{
+        transform: rotateZ(-5deg);
+    }100%{
+        transform: rotateZ(5deg);
+    }
+}
+
+
+/*^-^-^-^-^-^-  SECTION  ^-^-^-^-^-^-*/
+section{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+section > a{
+    text-shadow: 
+        0px 0px 15px var(--main-green), 
+        0px 0px 15px var(--main-green), 
+        0px 0px 15px var(--main-green);
+    -webkit-text-stroke: .2rem var(--main-dark);
+    position: relative;
+    animation: arrow 1s infinite linear alternate;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    color: var(--main-white);
+}
+@keyframes arrow {
+    from{
+        bottom: 0rem;
+        text-shadow: 
+        0px 0px 9px var(--main-green), 
+        0px 0px 9px var(--main-green), 
+        0px 0px 9px var(--main-green);
+    }to{
+        bottom: 1rem;
+        text-shadow: 
+        0px 0px 15px var(--main-green), 
+        0px 0px 15px var(--main-green), 
+        0px 0px 15px var(--main-green);
+    }
+}
