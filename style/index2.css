@@ -138,7 +138,6 @@ main{
     height: 70vh;
     display: grid;
     grid-auto-rows: max-content;
-    /* background-image: url("./../media/space.png"); */
     background-repeat: repeat;
 }
 .super__card{
@@ -257,4 +256,84 @@ section > a{
         0px 0px 15px var(--main-green), 
         0px 0px 15px var(--main-green);
     }
+}
+
+
+@media (max-width: 1750px) {
+    .title{
+        font-size: 4rem;
+    }
+    #nav__text{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 912px) {
+    .title{
+        font-size: 3rem;
+    }
+    .header__logo{
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+@media (max-width: 700px){
+    .title{
+        font-size: 2rem;
+    }
+    #nav__text{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px){
+    .header__logo{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    header{
+        height: 20vh;
+    }
+    nav{
+        height: 80vh;
+    }
+    .sprite{
+        transform: scale(.8);
+    }
+}
+
+@media (max-width: 470px){
+    .header__logo{
+        display: none;
+    }
+}
+
+@media (max-width: 400px){
+    header{
+        height: 15vh;
+    }
+    .headder__portal{
+        background-size: 50%;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+    nav{
+        height: 85vh;
+    }
+    #nav__text{
+        font-size: .8rem;
+    }
+    .sprite{
+        transform: scale(.6);
+    }
+    #arrow{
+        font-size: 4rem;
+    }
+
 }
