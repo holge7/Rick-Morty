@@ -76,6 +76,7 @@ let createCardCharacter = (cha) =>{
             <div class="card__data">
                 <div class="card__data-name">${cha.name}</div>
                 <div class="card__data-lot">
+                    <div class="${cha.status == 'Alive' ? 'alive' : 'dead'}"></div>
                     <div class="card__data-status">${cha.status}</div>
                     <span>&nbsp;-&nbsp;</span>
                     <div class="card__data-species">${cha.species}</div>
@@ -86,7 +87,7 @@ let createCardCharacter = (cha) =>{
                 </div>
                 <div>
                     <span class="card__data-info">Gender:</span>
-                    <div class="card__data-gender">${cha.gender}</div>
+                    <div class="card__data-gender">${cha.gender} ${cha.gender == "Male" ? '<i class="fas fa-mars"></i>' : '<i class="fas fa-venus"></i>'}</div>
                 </div>
             </div>
         </div>

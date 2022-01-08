@@ -24,7 +24,29 @@
        <h2 id="nav__text"><div id="nav__line"></div></h2>
     </nav>
 
-    <main id="main"></main>
+    <main id="main">
+        <div class="super__card" id="c${idAct}">
+            <div class="card">
+                <img src="${cha.image}" class="card__img" alt="">
+                <div class="card__data">
+                    <div class="card__data-name">${cha.name}</div>
+                    <div class="card__data-lot">
+                        <div class="card__data-status">${cha.status}</div>
+                        <span>&nbsp;-&nbsp;</span>
+                        <div class="card__data-species">${cha.species}</div>
+                    </div>
+                    <div>
+                        <span class="card__data-info">Last know location:</span>
+                        <div class="card__data-origin">${cha.origin}</div>
+                    </div>
+                    <div>
+                        <span class="card__data-info">Gender:</span>
+                        <div class="card__data-gender">${cha.gender}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <section>
         <a id="arrow" href="#c1"><i class="fas fa-long-arrow-alt-down"></i></a>

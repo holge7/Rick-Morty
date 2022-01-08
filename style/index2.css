@@ -176,10 +176,25 @@ main{
 }
 .card__data-lot{
     display: flex;
+    align-items: center;
     color: var(--main-white);
 }
 .card__data-info{
     color: var(--secon-gray);
+}
+.dead{
+    width: .8rem;
+    height: .8rem;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+.alive{
+    width: .8rem;
+    height: .8rem;
+    background-color: green;
+    border-radius: 50%;
+    margin-right: .5rem;
 }
 .card__data-origin, .card__data-gender, .card__data-lot{
     font-size: 1.3rem;
@@ -279,6 +294,20 @@ section > a{
         height: 3rem;
         width: 3rem;
     }
+    .card{
+        width: 40rem;
+        height: 15rem;
+    }
+    .card__img{
+        width: 15rem;
+        height: 15rem;
+    }
+    .card__data-name{
+        font-size: 1.7rem;
+    }
+    .card__data-origin, .card__data-gender, .card__data-lot{
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 700px){
@@ -287,6 +316,16 @@ section > a{
     }
     #nav__text{
         font-size: 1rem;
+    }
+    .card{
+        flex-direction: column;
+        width: 20rem;
+        height: 33rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .card__img{
+        border-radius: 50%;
     }
 }
 
@@ -305,11 +344,39 @@ section > a{
     .sprite{
         transform: scale(.8);
     }
+    #arrow{
+        font-size: 4rem;
+    }
 }
 
 @media (max-width: 470px){
     .header__logo{
         display: none;
+    }
+    .card{
+        width: 15rem;
+        height: 30rem;
+    }
+    .card__img{
+        width: 12rem;
+        height: 12rem;
+    }
+    .card__data-name{
+        font-size: 1.4rem;
+    }
+    .card__data-origin, .card__data-gender, .card__data-lot{
+        font-size: 1rem;
+    }
+    #next{
+        right: 8rem;
+    }
+    #gun{
+        width: 7rem;
+        height: 7rem;
+    }
+    #gun:hover{
+        width: 7rem;
+        height: 7rem;
     }
 }
 
@@ -332,8 +399,4 @@ section > a{
     .sprite{
         transform: scale(.6);
     }
-    #arrow{
-        font-size: 4rem;
-    }
-
 }
